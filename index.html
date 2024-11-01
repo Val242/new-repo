@@ -4,13 +4,41 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        button{
+            background-color: red;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 15px;
+            transition: .98s;
+            color: white;
+            font-weight: bold ;
+            font-size: 56px;
+            cursor: pointer;
+        }
+        button:hover{
+            
+            color: black;
+        }
+    </style>
 </head>
 <body>
     <p class="js-clone"></p>
+    <button onclick="
+   Youtube(); "class = 'js-join'>Join</button>
 
     <script>
 const text = document.querySelector('.js-clone').innerHTML = 'GOOD MORNING!'
 console.log(text);
+function Youtube(){
+    const buttonInput = document.querySelector('.js-join');
+    if(document.querySelector('.js-join').innerText === 'Join'){
+        document.querySelector('.js-join').innerText = 'Joined';
+        console.log(document.querySelector('.js-join'));
+    }else{
+        document.querySelector('.js-join').innerText = 'Join';
+    }
+}
     </script>
 </body>
 </html>
